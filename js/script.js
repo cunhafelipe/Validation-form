@@ -37,6 +37,7 @@ form.addEventListener('submit', (event) => {
     alert('Por favor, preencha o campo mensagem');
     return;
   }
+
   //Só envia o form caso todos os campos estiverem corretamente preenchidos
   form.submit();
 });
