@@ -19,11 +19,18 @@ form.addEventListener('submit', (event) => {
   }
 
   //Verifica se o e-mail está preenchido e se ele é válido
-  if (inputEmail.value === '' || !isEmailValid(inputEmail.value)) {
+  if (inputEmail.value === '') {
     Swal.fire({
       icon: 'error',
       title: 'Erro:',
       text: 'Por favor, digite seu email!',
+    });
+    return;
+  } else if (!isEmailValid(inputEmail.value)) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Erro:',
+      text: 'Por favor, digite um email válido!',
     });
     return;
   }
