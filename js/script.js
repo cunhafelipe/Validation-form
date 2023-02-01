@@ -10,31 +10,51 @@ form.addEventListener('submit', (event) => {
 
   //Verifica se o nome está vazio
   if (inputName.value === '') {
-    alert('Por favor, digite seu nome');
+    Swal.fire({
+      icon: 'error',
+      title: 'Erro:',
+      text: 'Por favor, digite seu nome!',
+    });
     return;
   }
 
   //Verifica se o e-mail está preenchido e se ele é válido
   if (inputEmail.value === '' || !isEmailValid(inputEmail.value)) {
-    alert('Por favor, digite seu e-mail');
+    Swal.fire({
+      icon: 'error',
+      title: 'Erro:',
+      text: 'Por favor, digite seu email!',
+    });
     return;
   }
 
   //Verifica se a senha está preenchida
   if (!validatePassword(inputPassword.value, 8)) {
-    alert('A senha precisa ter no mínimo 8 dígitos');
+    Swal.fire({
+      icon: 'error',
+      title: 'Erro:',
+      text: 'A senha precisa de no mínimo 8 dígitos.',
+    });
     return;
   }
 
   //Verifica se o select foi selecionado
   if (jobSelect.value === '') {
-    alert('Por favor, preencha sua situação de trabalho');
+    Swal.fire({
+      icon: 'error',
+      title: 'Erro:',
+      text: 'Por favor, preencha sua situação de trabalho.',
+    });
     return;
   }
 
   //Verifica se a mensagem está preenchida
   if (messageTexarea.value === '') {
-    alert('Por favor, preencha o campo mensagem');
+    Swal.fire({
+      icon: 'error',
+      title: 'Erro:',
+      text: 'Por favor, preencha o campo "mensagem".',
+    });
     return;
   }
 
