@@ -92,3 +92,10 @@ function validatePassword(password, minDigits) {
     return false;
   }
 }
+
+function get_data() {
+  const form_data = document.querySelector('form').elements;
+  for (const data of form_data) {
+    console.log(data.value);
+  }
+}
